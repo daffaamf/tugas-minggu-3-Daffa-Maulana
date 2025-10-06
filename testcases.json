@@ -1,0 +1,64 @@
+[
+  {
+    "id": "TC-LOGIN-001",
+    "module": "authentications",
+    "description": "Verifikasi login berhasil dengan kredensial yang valid",
+    "pre-condition": "Aplikasi sudah ter-instal dan sudah berada di screen login",
+    "test-steps": [
+      "Buka aplikasi",
+      "Masukkan username pada field username",
+      "Masukkan password pada field password",
+      "Tekan tombol LOGIN"
+    ],
+    "test-data": {
+      "username": "standard_user",
+      "password": "secret_sauce"
+    },
+    "expected": "Pengguna berhasil login dan di arahkan ke screen inventori",
+    "priority": "high",
+    "isPositive": true
+  },
+  {
+    "id": "TC-CATALOG-002",
+    "module": "catalogs",
+    "description": "Verifikasi fungsionalitas tambah produk dari screen katalog",
+    "pre-condition": "Pengguna sudah berhasil login dan sudah berada di halaman katalog",
+    "test-steps": [
+      "Buka aplikasi dan login sebagai standard_user",
+      "Di screen katalog, temukan produk bernama Sauce Labs Backpack",
+      "Tekan tombol ADD TO CART pada produk tersebut"
+    ],
+    "test-data": {
+      "username": "standard_user",
+      "password": "secret_sauce"
+    },
+    "expected": "Tombol berubah menjadi REMOVE dan icon keranjang di pojok kanan atas menampikan angka 1",
+    "priority": "high",
+    "isPositive": true 
+  },
+
+  {
+    "id": "TC-INV-003",
+    "description": "verifikasi bahwa tombol 'Tambahkan ke Keranjang' dapat menambahkan produk yang dipilih ke keranjang",
+    "pre-conditions": [
+      "Aplikasi sudah terinstal",
+      "User sudah login dengan kredensial yang valid",
+      "User berhasil login dan berada di halaman inventory"
+    ],  
+    "test-steps": [
+      "Buka Aplikasi",
+      "Masukkan nama pengguna yang valid di kolom nama pengguna",
+      "Masukkan kata sandi yang valid di kolom kata sandi",
+      "Klik tombol 'LOGIN'",
+      "User berhasil login dan diarahkan ke halaman inventory",
+      "Klik tambahkan produk yang akan dipilih ke keranjang"
+    ],
+    "test-data": {
+      "username": "standard_user",
+      "password": "secret_sauce"
+    },
+    "expected-result": "Produk ada di keranjang dan tombol diubah menjadi 'Remove'",
+    "priority": "High",
+    "isPositive": true
+  }
+]

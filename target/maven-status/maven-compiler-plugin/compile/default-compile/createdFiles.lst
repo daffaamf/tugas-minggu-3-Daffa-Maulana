@@ -1,0 +1,4 @@
+com\juaracoding\labs\App.class
+com\juaracoding\labs\screens\InventoryScreen.class
+com\juaracoding\labs\screens\LoginScreen.class
+com\juaracoding\labs\services\DriverService.class
